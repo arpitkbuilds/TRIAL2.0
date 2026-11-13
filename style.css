@@ -1,0 +1,542 @@
+
+/* =========================
+   1. GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fd;
+    color: #1e293b;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   2. SIDEBAR
+========================= */
+
+.sidebar {
+    width: 245px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5eaf2;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 21px;
+    color: #1e40af;
+}
+
+.menu-title {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    padding: 13px 14px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 25px;
+    border-top: 1px solid #e5eaf2;
+}
+
+.sidebar-bottom p {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.sidebar-bottom span {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+
+/* =========================
+   3. MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+    padding: 30px 38px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.topbar h1 {
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.topbar p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.profile-avatar {
+    width: 42px;
+    height: 42px;
+    background-color: #dbeafe;
+    color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile h4 {
+    font-size: 13px;
+}
+
+.profile p {
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+
+/* =========================
+   4. WELCOME CARD
+========================= */
+
+.welcome-card {
+    background: linear-gradient(110deg, #2563eb, #60a5fa);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 27px;
+    min-height: 195px;
+}
+
+.welcome-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    opacity: 0.85;
+}
+
+.welcome-card h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.welcome-card p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.welcome-icon {
+    font-size: 75px;
+    padding-right: 25px;
+}
+
+.primary-btn {
+    margin-top: 20px;
+    background-color: white;
+    color: #2563eb;
+    border: none;
+    padding: 11px 19px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #eff6ff;
+}
+
+
+/* =========================
+   5. STATISTICS CARDS
+========================= */
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin-bottom: 27px;
+}
+
+.stat-card {
+    background-color: white;
+    border: 1px solid #e8edf5;
+    padding: 19px;
+    border-radius: 13px;
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.blue {
+    background-color: #dbeafe;
+}
+
+.green {
+    background-color: #dcfce7;
+}
+
+.orange {
+    background-color: #ffedd5;
+}
+
+.purple {
+    background-color: #f3e8ff;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.stat-card h2 {
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.stat-card span {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+
+/* =========================
+   6. LOWER CONTENT
+========================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background-color: white;
+    border: 1px solid #e8edf5;
+    padding: 22px;
+    border-radius: 13px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-header h2 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.panel-header p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.text-btn {
+    border: none;
+    background: none;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+/* =========================
+   7. TASKS
+========================= */
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 0;
+    border-top: 1px solid #f1f5f9;
+}
+
+.task-check {
+    width: 19px;
+    height: 19px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.task-check.completed {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+.task-info {
+    flex: 1;
+}
+
+.task-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.task-info p {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.priority {
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.high {
+    color: #dc2626;
+    background-color: #fee2e2;
+}
+
+.medium {
+    color: #d97706;
+    background-color: #fef3c7;
+}
+
+.low {
+    color: #16a34a;
+    background-color: #dcfce7;
+}
+
+
+/* =========================
+   8. PROGRESS CIRCLE
+========================= */
+
+.progress-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-circle {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #2563eb 0% 75%,
+        #e2e8f0 75% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto 18px;
+}
+
+.circle-inner {
+    width: 125px;
+    height: 125px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-inner h2 {
+    font-size: 27px;
+    color: #2563eb;
+}
+
+.circle-inner p {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.progress-message {
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   9. FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px 0 5px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* =========================
+   10. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1050px) {
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 72px;
+        padding: 20px 10px;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .logo h2,
+    .menu-title,
+    .nav-link:not(.active),
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 14px 5px;
+        font-size: 0;
+    }
+
+    .nav-link span {
+        font-size: 19px;
+    }
+
+    .main-content {
+        padding: 20px 14px;
+    }
+
+    .topbar h1 {
+        font-size: 21px;
+    }
+
+    .welcome-card {
+        padding: 20px;
+    }
+
+    .welcome-card h2 {
+        font-size: 19px;
+    }
+
+    .welcome-icon {
+        font-size: 42px;
+        padding: 0;
+    }
+
+    .stats-section {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 13px;
+    }
+
+    .profile {
+        gap: 6px;
+    }
+
+    .profile-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .profile h4 {
+        font-size: 11px;
+    }
+}
