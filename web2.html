@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPilot | Student Dashboard</title>
+    <link rel="stylesheet" href="st2.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <h2>StudyPilot</h2>
+            </div>
+
+            <p class="menu-title">MENU</p>
+
+            <nav>
+                <a href="#" class="nav-link active">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="#" class="nav-link">
+                    <span>✓</span> My Tasks
+                </a>
+                <a href="#" class="nav-link">
+                    <span>▤</span> Study Planner
+                </a>
+                <a href="#" class="nav-link">
+                    <span>▣</span> Subjects
+                </a>
+                <a href="#" class="nav-link">
+                    <span>◷</span> Progress
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Study smarter, not harder.</p>
+                <span>Version 1.1</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Let's make today productive.</p>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">A</div>
+                    <div>
+                        <h4>Arpit</h4>
+                        <p>Free Account</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Welcome Section -->
+            <section class="welcome-card">
+                <div>
+                    <p class="welcome-label">YOUR LEARNING SPACE</p>
+                    <h2>Small steps, big achievements.</h2>
+                    <p>Stay focused and keep moving towards your goals.</p>
+                    <button class="primary-btn" id="exploreTasksBtn">Explore Tasks</button>
+                </div>
+                <div class="welcome-icon">🎓</div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📚</div>
+                    <p>Total Subjects</p>
+                    <h2 id="statSubjects">05</h2>
+                    <span>Subjects you're learning</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <p>Completed Tasks</p>
+                    <h2 id="statCompleted">12</h2>
+                    <span>Great work so far!</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">⏰</div>
+                    <p>Pending Tasks</p>
+                    <h2 id="statPending">04</h2>
+                    <span>Keep them on track</span>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">📈</div>
+                    <p>Study Progress</p>
+                    <h2 id="statProgress">75%</h2>
+                    <span>You're doing well!</span>
+                </div>
+            </section>
+
+            <!-- Lower Content -->
+            <section class="content-grid">
+
+                <!-- Tasks -->
+                <div class="panel tasks-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Today's Tasks</h2>
+                            <p>Your daily learning checklist</p>
+                        </div>
+                        <button class="text-btn" id="viewAllTasks">View all</button>
+                    </div>
+
+                    <div id="taskList">
+                        <!-- Tasks injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Progress Analyzer -->
+                <div class="panel progress-panel">
+                    <div class="panel-header">
+                        <div>
+                            <h2>Progress Analyzer</h2>
+                            <p>Detailed learning breakdown</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-circle" id="progressCircle">
+                        <div class="circle-inner">
+                            <h2 id="progressPercent">75%</h2>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+
+                    <p class="progress-message" id="progressMessage">
+                        Excellent progress! Keep up the consistency.
+                    </p>
+
+                    <!-- Subject-wise Progress -->
+                    <div class="analyzer-section">
+                        <h3>Subject Progress</h3>
+                        <div id="subjectBars"></div>
+                    </div>
+
+                    <!-- Weekly Insight -->
+                    <div class="analyzer-insight" id="weeklyInsight">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+            </section>
+
+            <footer>
+                <p>© 2026 StudyPilot. Made for better learning.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
