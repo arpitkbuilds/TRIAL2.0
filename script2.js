@@ -2,7 +2,6 @@
 // StudyPilot - Dashboard Logic + Progress Analyzer
 // =========================
 
-// ----- Sample Data -----
 const tasks = [
     {
         id: 1,
